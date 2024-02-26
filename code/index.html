@@ -17,15 +17,16 @@
                     </h1>
                 </div>
                 <div class="social-container">
-                    <div class="social-btn fb">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn fb">
                         <ion-icon name="logo-facebook" id="icone"></ion-icon>
-                    </div>
-                    <div class="social-btn ista">
-                        <ion-icon name="logo-instagram" id="icone"></ion-icon>
-                    </div>
-                    <div class="social-btn email">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-btn ista">
+                        <ion-icon  name="logo-instagram" id="icone"></ion-icon>
+                    </a>
+                    <a href="" class="social-btn email">
                         <ion-icon name="mail-outline" id="icone"></ion-icon>
-                    </div></div>
+                    </a>
+                </div>
                 <div class="hamburger-menu">
                     <div id="hamburger">
                         <div></div>
@@ -41,7 +42,7 @@
                         <li>Contact Us</li>
                     </ul>
                     <button id="slide-button-register">Register</button>
-                    <button>Login</button>
+                    <button id="slide-button-login">Login</button>
                 </div>
             </div>
             
@@ -65,7 +66,7 @@
                 </div>
 
                 <!-- LOGIN SECTION -->
-                <div class="login-container">
+                <div class="register-container">
                     <h3>Register now</h3>
                     <div class="exit">x</div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti perferendis esse ut a rem harum dignissimos, odit sequi. Enim, sint?</p><br>
@@ -79,6 +80,17 @@
                     <button id="register">Register</button>
                     <span>Do you have an account ?<button id="btn-login">Login</button></span>
                 </div>
+                <div class="login-container">
+                    <h2>Login</h2>
+                    <div class="exit login_exit">x</div>
+                    <input type="text" placeholder="E-mail">
+                    <input type="password" placeholder="Password">
+                    <input type="checkbox" id="login-checkbox">
+                    <a>Remember Me</a>
+                    <p>Don't have an account? <a href="#"  id="login-container-register">Register Now</a></p>
+                    <button>Login</button>
+                </div>
+
             </div>
             
         </main>
