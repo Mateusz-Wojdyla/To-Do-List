@@ -1,142 +1,252 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.app-container{
-    height: 100vh;
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to bottom right, rgba(142, 35, 156, 0.562) , rgba(84, 134, 241, 0.452), rgb(142, 35, 156));
-    backdrop-filter: blur(20px);
+.app-container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(142, 35, 156, 0.562),
+		rgba(84, 134, 241, 0.452),
+		rgb(142, 35, 156)
+	);
+	backdrop-filter: blur(20px);
+    
 }
 
-.application{
-    height:90%;
-    width:80%;
-    display: flex;
-    border-radius: 25px;
+.application {
+	height: 90%;
+	width: 80%;
+	display: flex;
+	border-radius: 25px;
+    box-shadow: 5px 5px 10px black;
 }
 
 /* ////////////////////////////////// SETTING BOX //////////////// */
-.setting-box{
-    height:100%;
-    width:15%;
-    background-color: rgba(50, 15, 95, 0.637);
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 20px;
-}
-
-
-
-
-/* //////////////////////////// MAIN BOX/////////////////////////////// */
-.main-app-box{
-    height: 100%;
-    width:85%;
-}
-
-
- /* ///////////////////////////// NAV SECTION ///////////////////////// */
-
- .nav-section{
-    height:5em;
-    width:100%;
-    background-color: aliceblue;
+.setting-box {
+	height: 100%;
+	width: 15%;
+	background-color: rgba(50, 15, 95, 0.637);
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 20px;
     display: flex;
-    position: relative;
-    top:0;
-    border-top-right-radius: 20px;
-}  
-.exit-app{
-    border:solid 2 px red;
-    height:100%;
-    width:5em;
-    display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    padding: 1em;
+    flex-direction: column;
     align-items: center;
-    right:1em;
+    justify-content: space-around;
 }
-.exitRing{
-    background-color: red;
+.setting-box h1{
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+.setting-box h3{
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+.setings-viev{
+
+    height:2em;
+    width:80%;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    border-bottom:solid 2px black;
+    padding-left:1.5em;
+}
+.setings-viev:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.social-icon{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+}
+ion-icon:hover{
+    transform: scale(1.1);
+}
+.logOut button{
+    height:2em;
+    width:10em;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    background-color: darkorange;
+}
+.logOut button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* //////////////////////////// MAIN BOX/////////////////////////////// */
+.main-app-box {
+	height: 100%;
+	width: 85%;
+}
+
+/* ///////////////////////////// NAV SECTION ///////////////////////// */
+
+.nav-section {
+	height: 5em;
+	width: 100%;
+	background-color: rgba(50, 15, 95, 0.637);
+	display: flex;
+	position: relative;
+	top: 0;
+	justify-content: space-around;
+    align-items: center;
+	border-top-right-radius: 20px;
+}
+.exit-app {
+	border: solid 2 px red;
+	height: 100%;
+	width: 5em;
+	display: flex;
+	position: absolute;
+	justify-content: flex-end;
+	padding: 1em;
+	align-items: center;
+	right: 1em;
+}
+.exitRing {
+	background-color: red;
+	border-radius: 50%;
+	height: 2em;
+	width: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+    
+}
+.exitRing:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+ion-icon {
+	font-size: 54px;
+    color: white;
+    font-weight: 900;
+}
+.real-time {
+	color: white;
+    height:80%;
+    padding:1em;
+    
+}
+.avatar {
+	
+	height: 100%;
+	width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#userAvatar{
+    height:80%;
+    width:40%;
+    background-image:url(/photo/app\ user.jpg);
+    background-position: center;
+    background-size: cover;
+    border:solid 2px black;
+    cursor: pointer;
     border-radius: 50%;
-    height: 2em;
-    width: 2em;
+}
+.real-time {
+	display: flex;
+	width: 15em;
+	margin-left: -5em;
+	font-size: larger;
+	font-weight: 700;
+	justify-content: space-around;
+	align-items: center;
+}
+#search {
+	height: 50%;
+	width: 20em;
+	border-radius: 15px;
+	border: none;
+	outline: none;
+    padding-left:2em;
+    font-size: larger;
+}
+.addTask-nav{
+    height:80%;
+    width:3%;
+    
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
 }
-ion-icon {
-    font-size: 34px;
+.calendaryChose{
     
-  }
-
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:3%;
+    height:80%;
+}
 
 /* ///////////////// calendar////////////// */
-.weekendDays{
-    height:5em;
-    width:100%;
-    display: flex;
-    position: static;
-    
-
+.weekendDays {
+	height: 5em;
+	width: 100%;
+	display: flex;
+	position: static;
 }
-.days{
-    height:100%;
-    width:20%;
-    display:flex;
-    align-items: center;
-    justify-content: center;  
-    font-size: 22px; 
-    color:black;
-    position: static;
-    border:solid 2px red;
+.days {
+	height: 100%;
+	width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	color: black;
+	position: static;
+    color:white;
+	border-right:3px solid white;
 }
-.days-time{
-    height:55.5em;
-    width:20%;
-    display: flex;
-   flex-direction: column;
-    border: solid 2px red;
-    overflow-y: auto;
-    position: relative;
+.days-time {
+	height: 56em;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	border-right:solid 3px white;
+	overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.377);
+	position: relative;
 }
-.main-time-container{
-    display:flex;
-    width:100%;
-    height:85%;
-    border-bottom-right-radius: 20px;
-   
-}
-.clock{
-    background-color: antiquewhite;
-    border: solid 2px red;
-    min-height:15em;
-    width: 100%;
-    border-bottom-right-radius: 20px;
-    
+.main-time-container {
+	display: flex;
+	width: 100%;
+	height: 85%;
+	border-bottom-right-radius: 20px;
 }
 
 /* //////////////// SCROLLBAR/////////// */
 .days-time::-webkit-scrollbar {
-    width: 4px; 
-  } 
-  .days-time::-webkit-scrollbar-track {
-    background: whitesmoke; 
-  }
-  .days-time::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); 
-    border-radius: 3px; 
-    border: 2px solid transparent; 
-  }
-  .days-time::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+	width: 4px;
+}
+.days-time::-webkit-scrollbar-track {
+	background: whitesmoke;
+}
+.days-time::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	border: 2px solid transparent;
+}
+.days-time::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.5);
 }
