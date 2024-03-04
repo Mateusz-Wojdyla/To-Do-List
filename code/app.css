@@ -222,6 +222,7 @@ ion-icon {
 	height: 56em;
 	width: 20%;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	border-right:solid 3px white;
 	overflow-y: auto;
@@ -233,6 +234,189 @@ ion-icon {
 	width: 100%;
 	height: 85%;
 	border-bottom-right-radius: 20px;
+}
+/* ////////////////// TASK ADD WINDOW /////////// */
+.exit-btn{
+	position: absolute;
+	top:1%;
+	right:2%;
+	color: red;
+	font-size: 24px;
+	cursor:pointer;
+}
+.task-add-window{
+	position: absolute;
+	top:40%;
+	left:45.5%;
+	display: none;
+	flex-direction: column;
+	width: 20%;
+	height:25%;
+	background-color: rgb(104, 58, 163);
+	z-index: 1;
+	border-radius: 15px;
+	border:solid 3px white;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s ease-in-out;
+}
+.data-box{
+	
+	display: flex;
+	align-items: center;
+	height:25%;
+	width:100%
+}
+#calendar-select{
+	margin-left: 1em;
+}
+.data-box p{
+	color: white;
+	margin-left: 10%;
+	
+}
+.data-box a{
+	color: white;
+	margin-right: 10%;
+	
+}
+#range{
+	position: relative;
+	width:25%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.task-box{
+	
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:40%;
+	
+}
+.task-box input{
+	height: 50%;
+	width: 70%;
+	border-radius: 15px;
+	border: none;
+	outline: none;
+    padding-left:2em;
+    font-size: larger;
+}
+.button-box{
+	width:100%;
+	height:30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button-box button{
+	height:2em;
+    width:10em;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    background-color: darkorange;
+}
+.button-box button:hover{
+	transform: scale(1.1);
+}
+.days-select{
+	height:100%;
+	width:100%;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color:white;
+	background-color:rgba(64, 21, 104, 0.74);
+}
+.selectDay{
+	position: absolute;
+	border-radius:15px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	height:25%;
+	background-color: rgb(104, 58, 163);
+	top:40%;
+	left:45.5%;
+	cursor: pointer;
+}
+.selectDay input{
+	position: absolute;
+	height: 2.5em;
+	width:20em;
+	right:2em;
+	bottom:6em;
+	padding-left: 2em;
+	background-color:rgba(64, 21, 104, 0.74);
+	color: white;
+	border-radius:10px;
+	border:none;
+	outline: none;
+	cursor:pointer;
+}
+.selectDay button{
+	position: absolute;
+	bottom:1em;
+	left:33%;
+	height:2em;
+    width:10em;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    background-color: darkorange;
+}
+.selectDay button:hover{
+	transform: scale(1.1);
+}
+
+.days-section{
+	height:80%;
+	display: grid;
+	grid-template-columns: 33% 33% 33% ;
+	grid-template-rows: 33% 33% 33%;
+	gap:2px;
+
+	
+}
+
+.new-task{
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(199, 151, 243);
+	border-bottom:4px solid rgb(78, 3, 121);
+	border-radius:10px;
+	width:95%;
+	height:auto;
+	margin-top: 1em;
+	padding:4px;
+	
+
+}
+.nav-task{
+	width:100%;
+	height:20%;
+	padding-right:1em;
+	display: flex;
+	color: white;
+	justify-content: space-between;
+}
+.main-task{
+	padding:1em;
+	color:white;
+}
+.exit-task{
+	color:red;
+	cursor: pointer;
+}
+.time-task{
+	color: rgb(179, 100, 3);
 }
 
 /* //////////////// SCROLLBAR/////////// */

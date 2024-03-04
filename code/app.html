@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/code/app.css">
-    <title>Make You'r Time Better</title>
-</head>
-<body>
-    <div class="app-container">
-        
-        <div class="application">
-            <div class="setting-box">
-                <h1>ListMaker</h1>
-                <h3>Make you'r day better</h3>
-                <div class="add-tasks setings-viev">Add task</div>
-                <div class="add-team-tasks setings-viev">Add team Task</div>
-                <div class="your-team setings-viev">Your Team</div>
-                <div class="notyfication setings-viev">Notyfication</div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/code/app.css" />
+		<title>Make You'r Time Better</title>
+	</head>
+	<body>
+		<div class="app-container">
+			<div class="application">
+				<div class="setting-box">
+					<h1>ListMaker</h1>
+					<h3>Make you'r day better</h3>
+					<div class="add-tasks setings-viev">Add task</div>
+					<div class="add-team-tasks setings-viev">Add team Task</div>
+					<div class="your-team setings-viev">Your Team</div>
+					<div class="notyfication setings-viev">Notyfication</div>
 
-                <div class="setings setings-viev">Settings</div>
-                <div class="logOut"><button id="btn-logOut">Log Out</button></div>
-                <div class="social-icon">
-                    <a href="https://www.facebook.com" target="_blank" class="social-btn fb">
-                        <ion-icon name="logo-facebook" id="icone"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-btn ista">
-                        <ion-icon  name="logo-instagram" id="icone"></ion-icon>
-                    </a>
-                    <a href="" class="social-btn email">
-                        <ion-icon name="mail-outline" id="icone"></ion-icon>
-                    </a>
-                </div>
+					<div class="setings setings-viev">Settings</div>
+					<div class="logOut"><button id="btn-logOut">Log Out</button></div>
+					<div class="social-icon">
+						<a
+							href="https://www.facebook.com"
+							target="_blank"
+							class="social-btn fb">
+							<ion-icon name="logo-facebook" id="icone"></ion-icon>
+						</a>
+						<a
+							href="https://www.instagram.com"
+							target="_blank"
+							class="social-btn ista">
+							<ion-icon name="logo-instagram" id="icone"></ion-icon>
+						</a>
+						<a href="" class="social-btn email">
+							<ion-icon name="mail-outline" id="icone"></ion-icon>
+						</a>
+					</div>
+				</div>
 
-            </div>
+				<div class="main-app-box">
+					<div class="nav-section">
+						<div class="real-time">
+							12:55
+							<div id="data">01.03.2024</div>
+						</div>
+						<div class="addTask-nav">
+							<ion-icon name="add-outline"></ion-icon>
+						</div>
+						<div class="calendaryChose">
+							<ion-icon name="calendar-number-outline"></ion-icon>
+						</div>
+						<input id="search" type="text" placeholder="Search" />
+						<div class="exit-app">
+							<div class="exitRing">
+								<ion-icon name="close-outline"></ion-icon>
+							</div>
+						</div>
+						<div class="avatar">
+							<div id="userAvatar"></div>
+						</div>
+					</div>
 
-            <div class="main-app-box">
-                <div class="nav-section">
-                    <div class="real-time">12:55 <div id="data">01.03.2024</div></div>
-                    <div class="addTask-nav"><ion-icon name="add-outline"></ion-icon>
+					<div class="weekendDays container">
+						<div class="pon- days">Poniedziałek</div>
+						<div class="wt- days">Wtorek</div>
+						<div class="sr- days">Środa</div>
+						<div class="czw- days">Czwartek</div>
+						<div class="pt- days">Piątek</div>
+						<div class="so- days">Sobota</div>
+						<div class="ndz- days">Niedziela</div>
+					</div>
+
+					<div class="task-add-window">
+						<div class="exit-btn">x</div>
+						<div class="data-box">
+							<ion-icon id="calendar-select"name="calendar-number-outline"></ion-icon>
+							<p>less important</p>
+							<input id="range" type="range" />
+							<a>important</a>
+						</div>
+						<div class="task-box">
+							<input type="text" placeholder="Add your task" />
+						</div>
+						<div class="button-box">
+							<button>Add</button>
+						</div>
+					</div>
+
+                    <div class="selectDay">
+                        <div class="days-section">
+                            <div class="days-select" id="poniedzialek">Poniedziałek</div>
+                            <div class="days-select" id="wtorek">Wtorek</div>
+                            <div class="days-select" id="sroda">Środa</div>
+                            <div class="days-select" id="czwartek">Czwartek</div>
+                            <div class="days-select" id="piatek">Piątek</div>
+                            <div class="days-select" id="sobota">Sobota</div>
+                            <div class="days-select" id="niedziela">Niedziela</div>
+                        </div>
+                        <input type="date">
+                        <button>add</button>
                     </div>
-                    <div class="calendaryChose"><ion-icon name="calendar-number-outline"></ion-icon></div>
-                    <input id="search" type="text" placeholder="Search">
-                    <div class="exit-app">
-                        <div class="exitRing"><ion-icon name="close-outline"></ion-icon></div>
-                    </div>
-                    <div class="avatar">
-                        <div id="userAvatar"></div>
-                    </div>
-                </div>
-                 
-                <div class="weekendDays container">
-                    <div class="pon  days">Poniedziałek</div>
-                    <div class="wt days">Wtorek</div>
-                    <div class="Sr days">Środa</div>
-                    <div class="czw days">Czwartek</div>
-                    <div class="pt days">Piątek</div>
-                    <div class="so days">Sobota</div>
-                    <div class="ndz days">Niedziela</div>
-                </div>
 
-                <div class="main-time-container">
-                    <div class="days-time pon">
-                      
-                    </div>
-                <div class="days-time wt">
-                   
-                </div>
-                <div class="days-time sr">
-                    
-                </div>
-                <div class="days-time czw">
-                   
-                </div>
-                <div class="days-time pt">
-                  
-                </div>
-                <div class="days-time so">
-                    
-                </div>
-                <div class="days-time ndz">
-                   
-                </div>
-                </div>
-                
-    
-                
-            </div>
-        </div>
+					<div class="main-time-container">
+						<div class="days-time pon"><div class="new-task">
+                            <div class="nav-task">
+                                <div class="date-task">12/02/2024</div>
+                                <div class="exit-task">x</div>
+                            </div>
+                            <div class="main-task"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus hic nostrum architecto officiis? Non fugiat </p></div>
+                            <div class="time-task">07-10</div>
+                        </div></div>
+						<div class="days-time wt"></div>
+						<div class="days-time sr"></div>
+						<div class="days-time czw"></div>
+						<div class="days-time pt"></div>
+						<div class="days-time so"></div>
+						<div class="days-time ndz"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    </div>
-    
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="app.js"></script>
-</body>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
-
-
-
-
- 
