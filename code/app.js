@@ -3,18 +3,12 @@ const taskWindow = document.querySelector(".task-add-window");
 const calendaryNav = document.querySelector(".calendaryChose");
 const addTask = document.querySelector(".addTask-nav");
 const exitBtn = document.querySelector(".exit-btn");
-////////  calendar days///////
-const pon = document.querySelector(".pon");
-const wt = document.querySelector(".wt");
-const sr = document.querySelector(".sr");
-const czw = document.querySelector(".czw");
-const pt = document.querySelector(".pt");
-const so = document.querySelector(".so");
-const ndz = document.querySelector(".ndz");
-//////////////////////////////////////////////////////
+
 const dayExit = document.querySelector("#exit-daySelect");
 const selectDay = document.querySelector(".selectDay");
 const calendarTaskAdd = document.querySelector("#calendar-select");
+const dateBtn = document.querySelector("#dateBtn");
+const searchAddTask = document.querySelector("#searchAddTask");
 
 ///////////////SElect DAY WINDOW/////////
 const poniedzialek = document.querySelector("#poniedzialek");
@@ -24,7 +18,7 @@ const czwartek = document.querySelector("#czwartek");
 const piatek = document.querySelector("#piatek");
 const sobota = document.querySelector("#sobota");
 const niedziela = document.querySelector("#niedziela");
-////////// TASK WINDOW ////////////
+////////// TASK WINDOW SHOW    ////////////
 exitBtn.addEventListener("click", function () {
 	taskWindow.style.display = "none";
 });
@@ -56,26 +50,58 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+dateBtn.addEventListener("click", function () {
+	if (taskWindow.style.display === "flex" || taskWindow.style.display === "") {
+		taskWindow.style.display = "none";
+		addNewTask;
+
+	}
+});
 
 
-// Funkcja do dodawania boxa
-//  function dodajBox(rubryka) {
-//     var box = document.createElement("div");
-//     box.className = "box";
-//     box.textContent = "Nowy box";
-//     document.querySelector("." + rubryka).appendChild(box);
-// }
 
-// // Funkcja do usuwania boxa
-// function usunBox(rubryka) {
-//     var boxes = document.querySelector("." + rubryka).querySelectorAll(".box");
-//     if (boxes.length > 0) {
-//         var lastBox = boxes[boxes.length - 1];
-//         lastBox.parentNode.removeChild(lastBox);
-//     }
-// }
+function addNewTask(){
+	let inputValue = document.getElementById("searchAddTask").Value;
 
-// // Przykładowe użycie
-// dodajBox("pon");
-// dodajBox("pon");
-// usunBox("pon");
+	let newTask = document.createElement("div");
+
+	newTask.classList.add("main-task");
+
+	newTask.textContent = inputValue;
+	let taskList = document.querySelector(".ndz");
+
+	taskList.appendChild(newTask);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

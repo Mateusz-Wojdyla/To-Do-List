@@ -338,7 +338,7 @@ ion-icon {
 	position: absolute;
 	border-radius:15px;
 	z-index: 2;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	padding-top:2em;
 	width: 20%;
