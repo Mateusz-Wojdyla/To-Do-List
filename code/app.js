@@ -1,3 +1,4 @@
+
 const logOut = document.querySelector("#btn-logOut");
 const taskWindow = document.querySelector(".task-add-window");
 const calendaryNav = document.querySelector(".calendaryChose");
@@ -31,6 +32,22 @@ dayExit.addEventListener("click", function () {
 calendarTaskAdd.addEventListener("click", function () {
 	selectDay.style.display = "flex";
 });
+
+
+const exitApp = document.querySelector(".exitRing")
+const appContainer = document.querySelector(".application")
+exitApp.addEventListener("click",function(){
+	appContainer.style.display = "none";
+	appBlankHl.style.display = "flex";
+
+})
+const appLoginBtn = document.querySelector("#blankAppLoginBtn");
+const appBlankHl = document.querySelector(".blankAppClouse")
+
+appLoginBtn.addEventListener("click",function(){
+	appBlankHl.style.display = "none";
+	appContainer.style.display = "flex"
+})
 
 ////////////////////ADD TASK FOR DAYS /////////////
 const daysSelect = document.querySelectorAll(
