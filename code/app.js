@@ -39,9 +39,9 @@ pon.addEventListener("click",function (){
 	
 })
 /////////// NEW TASK VALUE/////////
-const readyTask = document.querySelector(".new-task")
+const readyTask = document.querySelectorAll(".new-task")
 const dataTask = document.querySelector(".date-task")
-const mainTask = document.querySelector(".main-task p")
+
 const timeTask = document.querySelector(".time-task")
 ///////////////////////////////////
 const dateAddTask = document.querySelector("#dateAddTask")
@@ -62,28 +62,38 @@ const timeAddTask = document.querySelector("#timeAddTask")
 // 	readyTask.style.display = "flex"
 // 	console.log(inputValue)
 // })
-dateBtn.addEventListener("click", function() {
+dateBtn.addEventListener("click", function showTask() {
     let inputValue = inputAddTask.value;
     let dateValue = dateAddTask.value;
     let timeValue = timeAddTask.value;
-
-    let newTask = document.createElement("div");
+    const readyTask = document.querySelector(".days-time.pon");
+    const newTask = document.createElement("div");
     newTask.classList.add("new-task");
-    newTask.textContent = inputValue;
-
-    let newData = document.createElement("div");
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = inputValue;
+    const newData = document.createElement("div");
     newData.classList.add("date-task");
     newData.textContent = dateValue;
-
-    let newTime = document.createElement("div");
+    const newTime = document.createElement("div");
     newTime.classList.add("time-task");
     newTime.textContent = timeValue;
-
-    newTask.appendChild(newData);
+    const navTask = document.createElement("div");
+    navTask.classList.add("nav-task");
+    const exitTask = document.createElement("div");
+    exitTask.classList.add("exit-task");
+    exitTask.textContent = "x";
+    exitTask.addEventListener("click", function() {   
+        newTask.remove(); 
+    });
+    const mainTask = document.createElement("div"); 
+    mainTask.classList.add("main-task");
+    newTask.appendChild(navTask);
+    navTask.appendChild(exitTask); 
+    navTask.appendChild(newData);
+    newTask.appendChild(mainTask);
+    mainTask.appendChild(newParagraph);
     newTask.appendChild(newTime);
-
     readyTask.appendChild(newTask);
-    readyTask.style.display = "flex";
 });
 ////////// TASK WINDOW SHOW    ////////////
 exitBtn.addEventListener("click", function () {
@@ -111,8 +121,15 @@ const appLoginBtn = document.querySelector("#blankAppLoginBtn");
 const appBlankHl = document.querySelector(".blankAppClouse")
 
 appLoginBtn.addEventListener("click",function(){
-	appBlankHl.style.display = "none";
-	appContainer.style.display = "flex"
+	const loginToApp = document.querySelector("#loginToApp");
+	const passwordToApp = document.querySelector("#passwordToApp")
+	
+	
+	if(loginToApp.value === "test@gmail.pl" && passwordToApp.value === "test"){
+		appBlankHl.style.display = "none";
+		appContainer.style.display = "flex"
+	}
+
 })
 
 const btnLogOut = document.querySelector("#btn-logOut");
@@ -149,13 +166,8 @@ dateBtn.addEventListener("click", function () {
 
 
 
-// function addNewTask(){
-// 	let inputValue = document.getElementById("searchAddTask").Value;
-// 	let newTask = document.createElement("div");
-// 	newTask.classList.add("main-task");
-// 	newTask.textContent = inputValue;
-// 	taskList.appendChild(newTask);
-// }
+
+
 
 
 
