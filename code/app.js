@@ -12,13 +12,13 @@ const dateBtn = document.querySelector("#dateBtn");
 const searchAddTask = document.querySelector("#searchAddTask");
 
 ///////////////SElect DAY WINDOW/////////
-const d1 = document.querySelector("#poniedzialek")
-const d2 = document.querySelector("#wtorek")
-const d3 = document.querySelector("#sroda")
-const d4 = document.querySelector("#czwartek")
-const d5 = document.querySelector("#piatek")
-const d6 = document.querySelector("#sobota")
-const d7 = document.querySelector("#niedziela")
+const d1 = document.querySelector("#poniedzialek");
+const d2 = document.querySelector("#wtorek");
+const d3 = document.querySelector("#sroda");
+const d4 = document.querySelector("#czwartek");
+const d5 = document.querySelector("#piatek");
+const d6 = document.querySelector("#sobota");
+const d7 = document.querySelector("#niedziela");
 
 const pon = document.querySelector(".pon")
 const wt = document.querySelector(".wt")
@@ -163,6 +163,7 @@ dateBtn.addEventListener("click", function () {
 
 	}
 });
+
 
 
 

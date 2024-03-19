@@ -422,6 +422,18 @@ ion-icon {
 .main-task {
 	padding:1em;
 	color:white;
+	height: auto;
+
+}
+.main-task p{
+	padding:2px;
+	height: auto;
+	margin: 2px;
+	justify-content: center;
+	text-align:left;
+	word-wrap: break-word;
+	text-overflow:ellipsis;
+    
 }
 .exit-task{
 	color:red;
